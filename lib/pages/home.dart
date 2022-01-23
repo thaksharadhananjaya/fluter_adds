@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:lazy_load_scrollview/lazy_load_scrollview.dart';
-import 'package:test/pages/newAdd.dart';
+import 'package:test/pages/newAd.dart';
 
 import '../bloc/adds_bloc.dart';
 import '../config.dart';

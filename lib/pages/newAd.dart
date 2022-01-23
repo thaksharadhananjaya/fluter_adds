@@ -28,7 +28,7 @@ class _NewAddState extends State<NewAdd> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Post New Add"),
+        title: const Text("Post New Advertisement"),
       ),
       body: Form(
         key: formKey,
@@ -179,7 +179,7 @@ class _NewAddState extends State<NewAdd> {
       });
 
       var data = await json.decode(response.body);
-      if (data.toString() == "false" || data.toString() == "-1") {
+  
         Flushbar(
           message: 'Upload faild!',
           messageColor: Colors.red,
@@ -190,18 +190,7 @@ class _NewAddState extends State<NewAdd> {
             color: Colors.red,
           ),
         ).show(context);
-      } else {
-        Flushbar(
-          message: 'New product added',
-          messageColor: Colors.green,
-          backgroundColor: kPrimaryColor,
-          duration: const Duration(seconds: 3),
-          icon: const Icon(
-            Icons.info_rounded,
-            color: Colors.green,
-          ),
-        ).show(context);
-      }
+      
     } catch (e) {
       print(e.toString());
     }
